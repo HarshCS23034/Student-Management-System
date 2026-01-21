@@ -16,7 +16,7 @@ A full-stack web application for managing student records, attendance, courses, 
 
 ## Setup Instructions
 1. Clone the repository  
-   git clone https://github.com/your-username/student-management-system.git
+   git clone https://github.com/HarshCS23034/student-management-system.git
 
 2. Install dependencies  
    npm install
