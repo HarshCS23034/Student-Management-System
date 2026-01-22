@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <form>
+            <h2 class="head">!... Student Admission Rgistration Form ...!</h2>
+            <hr>
+            <div class="form-details">
+                <div class="personal">
+                    <h4>Personal Details</h4>
+                    <label>Student full name *</label>
+                    <input type="text" required placeholder="Enter full name">
+                    <label>Date of birth *</label>
+                    <input type="date" required placeholder="Enter DOB">
+                    <br>
+                    <br>
+                    <label>Gender *</label>
+                    <input type="radio">male
+                    <input type="radio">female
+                    <input type="radio">other
+                    <br>
+                    <br>
+                    <label>Email *</label>
+                    <input type="text" required placeholder="enter your email">
+                    <label>Mobile No. *</label>
+                    <input type="number" required placeholder="Enter mobile">
+                    <br>
+                    <br>
+                    <label>Upload Photo *</label>
+                    <input type="file" required placeholder="upload file">
+                <div>
+                    <h4>Address Details</h4>
+                    <label>Residential Address *</label>
+                    <br>
+                    <textarea required placeholder="Enter Address">
+                    </textarea>
+                    <br>
+                    <br>
+                    <label>City *</label>
+                    <select required>
+                        <option>Nagpur</option>
+                        <option>Amaravati</option>
+                        <option>Akola</option>
+                        <option>Mumbai</option>
+                        <option>Pune</option>
+                        <option>Nashik</option>
+                        <option>Nanded</option>
+                    </select>
+                    <label>State *</label>
+                    <select required>
+                        <option>Mahrashtra</option>
+                        <option>rajasthan</option>
+                        <option>Madhya pradesh</option>
+                        <option>Hariyana</option>
+                        <option>Bihar</option>
+                        <option>karnataka</option>
+                        <option>Telngana</option>
+                    </select>
+                    <label>Pin-code *</label>
+                    <input type="number" required placeholder="enter pincode">
+                </div>
+                </div>
+                   <div class="parents">
+                    <h4>Gaurdian's Details</h4>
+                    <label>father full name *</label>
+                    <input type="text" required placeholder="Enter father name">
+                    <label>mother full name *</label>
+                    <input type="text" required placeholder="Enter mother name">
+                    <br>
+                    <br>
+                    <label>Mobile *</label>
+                    <input type="number" required placeholder="enter mobile">
+                    <label>Occupation *</label>
+                    <input type="text" required placeholder="enter occupation">
+                    <br>
+                    <br>
+                </div>
+                   </div>
+                   <div class="Education">
+                    <h4>Education Details</h4>
+                    <label>10'th school name *</label>
+                    <input type="text" required placeholder="Enter 10'th details">
+                    <label>10'th Percentage</label>
+                    <input type="number" required placeholder=" ex: 90.50 = 9.05">
+                    <br>
+                    <br>
+                    <label>12'th school name *</label>
+                    <input type="text" required placeholder="Enter 12'th details">
+                    <label>12'th Percentage</label>
+                    <input type="number" required placeholder=" ex: 90.50 = 9.05">
+                    <br>
+                    <br>
+                    <label>CET percentile *</label>
+                    <input type="number" required placeholder="enter cet percentile">
+                    <label>CET Marksheet</label>
+                    <input type="file" required placeholder="upload file">
+                    <br>
+                    <br>
+                </div>
+                <div class="other">
+                    <h4>Other Details</h4>
+                    <label>Category *</label>
+                    <select required>
+                        <option>General</option>
+                        <option>OBC</option>
+                        <option>SC</option>
+                        <option>ST</option>
+                    </select>
+                    <br>
+                    <br>
+                    <label>Language Known *</label>
+                    <input type="radio">English
+                    <input type="radio">Marathi
+                    <input type="radio">Hindi
+                </div>
+                <div class="check-box">
+                    <h4>Declaration</h4>
+                    <input type="checkbox">
+                    <label>I hereby declare that the above information is correct.</label>
+                </div>
+                <br>
+                <br>
+                <div class="submission">
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
