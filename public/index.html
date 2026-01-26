@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Registration Form</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+<div class="form-container">
+<form id="admission-form">
+
+    <h2 class="head">!... Student Admission Registration Form ...!</h2>
+    <hr>
+
+    <!-- PERSONAL DETAILS -->
+    <div class="personal">
+        <h4>Personal Details</h4>
+
+        <label>Student full name *</label>
+        <input type="text" name="stuName" required>
+
+        <label>Date of birth *</label>
+        <input type="date" name="dob" required>
+
+        <label>Gender *</label><br>
+        <input type="radio" name="gender" value="male" required> Male
+        <input type="radio" name="gender" value="female"> Female
+        <input type="radio" name="gender" value="other"> Other
+        <br><br>
+
+        <label>Email *</label>
+        <input type="email" name="stuEmail" required>
+
+        <label>Mobile No. *</label>
+        <input type="number" name="mobile" required>
+
+        <label>Upload Photo *</label>
+        <input type="file" name="photo">
+    </div>
+
+    <!-- ADDRESS DETAILS -->
+    <div class="address">
+        <h4>Address Details</h4>
+
+        <label>Residential Address *</label><br>
+        <textarea name="address" required></textarea><br><br>
+
+        <label>City *</label>
+        <select name="city" required>
+            <option value="Nagpur">Nagpur</option>
+            <option value="Amaravati">Amaravati</option>
+            <option value="Akola">Akola</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Nashik">Nashik</option>
+            <option value="Nanded">Nanded</option>
+        </select>
+
+        <label>State *</label>
+        <select name="state" required>
+            <option value="Maharashtra">Maharashtra</option>
+            <option value="Rajasthan">Rajasthan</option>
+            <option value="Madhya Pradesh">Madhya Pradesh</option>
+            <option value="Haryana">Haryana</option>
+            <option value="Bihar">Bihar</option>
+            <option value="Karnataka">Karnataka</option>
+            <option value="Telangana">Telangana</option>
+        </select>
+
+        <label>Pin-code *</label>
+        <input type="number" name="pincode" required>
+    </div>
+
+    <!-- GUARDIAN DETAILS -->
+    <div class="parents">
+        <h4>Guardian's Details</h4>
+
+        <label>Father full name *</label>
+        <input type="text" name="fatherName" required>
+
+        <label>Mother full name *</label>
+        <input type="text" name="motherName" required>
+
+        <label>Guardian Mobile *</label>
+        <input type="number" name="guardianMobile" required>
+
+        <label>Occupation *</label>
+        <input type="text" name="occupation" required>
+    </div>
+
+    <!-- EDUCATION DETAILS -->
+    <div class="education">
+        <h4>Education Details</h4>
+
+        <label>10th School Name *</label>
+        <input type="text" name="school10" required>
+
+        <label>10th Percentage *</label>
+        <input type="number" step="0.01" name="percent10" required>
+
+        <label>12th School Name *</label>
+        <input type="text" name="school12" required>
+
+        <label>12th Percentage *</label>
+        <input type="number" step="0.01" name="percent12" required>
+
+        <label>CET Percentile *</label>
+        <input type="number" step="0.01" name="cetPercentile" required>
+
+        <label>CET Marksheet</label>
+        <input type="file" name="cetMarksheet">
+    </div>
+
+    <!-- OTHER DETAILS -->
+    <div class="other">
+        <h4>Other Details</h4>
+
+        <label>Category *</label>
+        <select name="category" required>
+            <option value="General">General</option>
+            <option value="OBC">OBC</option>
+            <option value="SC">SC</option>
+            <option value="ST">ST</option>
+        </select>
+
+        <label>Language Known *</label><br>
+        <input type="radio" name="language" value="English" required> English
+        <input type="radio" name="language" value="Marathi"> Marathi
+        <input type="radio" name="language" value="Hindi"> Hindi
+    </div>
+
+    <!-- DECLARATION -->
+    <div class="check-box">
+        <h4>Declaration</h4>
+        <input type="checkbox" name="declaration" value="yes" required>
+        <label>I hereby declare that the above information is correct.</label>
+    </div>
+
+    <!-- SUBMIT -->
+    <div class="submission">
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+
+</form>
+</div>
+
+<script>
+document.getElementById("admission-form").addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch("/submit", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.text();
+        alert(result);
+
+    } catch (err) {
+        console.error("Submission failed:", err);
+    }
+});
+</script>
+
+</body>
+</html>

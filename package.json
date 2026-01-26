@@ -1,0 +1,29 @@
+{
+  "name": "student-management-system",
+  "version": "1.0.0",
+  "description": "It's a student admition portal ",
+  "homepage": "https://github.com/HarshCS23034/Student-Management-System#readme",
+  "bugs": {
+    "url": "https://github.com/HarshCS23034/Student-Management-System/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshCS23034/Student-Management-System.git"
+  },
+  "license": "ISC",
+  "author": "Krishna,Harsh,krunal,Girish",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "mysql2": "^3.16.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
